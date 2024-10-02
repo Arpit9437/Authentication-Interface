@@ -1,34 +1,40 @@
-<h1 align="center">Advanced Auth Tutorial 🔒 </h1>
+# Authentication Interface [Live Demo](https://authentication-interface.onrender.com/)
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+Welcome to the Authentication Interface repository! This project provides a comprehensive solution for user authentication, featuring key functionalities essential for a seamless user experience.
 
-[Video Tutorial on Youtube](https://youtu.be/pmvEgZC55Cg)
+## Features
 
-About This Course:
+- **User Registration and Login:**
+  - **Signup Page UI**: A user-friendly interface for new users to create an account.
+  - **Login Page UI**: A straightforward interface for existing users to access their accounts.
+  - **Login Endpoint**: Securely authenticate users with credentials.
 
--   🔧 Backend Setup
--   🗄️ Database Setup
--   🔐 Signup Endpoint
--   📧 Sending Verify Account Email
--   🔍 Verify Email Endpoint
--   📄 Building a Welcome Email Template
--   🚪 Logout Endpoint
--   🔑 Login Endpoint
--   🔄 Forgot Password Endpoint
--   🔁 Reset Password Endpoint
--   ✔️ Check Auth Endpoint
--   🌐 Frontend Setup
--   📋 Signup Page UI
--   🔓 Login Page UI
--   ✅ Email Verification Page UI
--   📤 Implementing Signup
--   📧 Implementing Email Verification
--   🔒 Protecting Our Routes
--   🔑 Implementing Login
--   🏠 Dashboard Page
--   🔄 Implementing Forgot Password
--   🚀 Super Detailed Deployment
--   ✅ This is a lot of work. Support my work by subscribing to the [Channel](https://www.youtube.com/@asaprogrammer_)
+- **Email Verification:**
+  - **Sending Verify Account Email**: Automatically sends a verification email upon signup.
+  - **Verify Email Endpoint**: Validates user email addresses to enhance security.
+  - **Email Verification Page UI**: A clean interface for users to confirm their email.
+
+- **Password Management:**
+  - **Forgot Password Endpoint**: Allows users to request a password reset.
+  - **Reset Password Endpoint**: Facilitates secure password updates for users.
+  
+- **Authentication Checks:**
+  - **Check Auth Endpoint**: Verifies if a user is currently logged in.
+  
+- **User Logout:**
+  - **Logout Endpoint**: Enables users to safely log out of their accounts.
+
+## Implementation Highlights
+
+- **Welcome Email Template**: Customizable email template for welcoming new users.
+- **Robust API Endpoints**: Secure and efficient endpoints for authentication processes.
+- **Responsive UI**: Intuitive interfaces designed for both desktop and mobile users.
+
+## Getting Started
+
+To get started with this project, follow the instructions below:
+
+### Installation
 
 ### Setup .env file
 
@@ -39,7 +45,7 @@ JWT_SECRET=your_secret_key
 NODE_ENV=development
 
 MAILTRAP_TOKEN=your_mailtrap_token
-MAILTRAP_ENDPOINT=https://send.api.mailtrap.io/
+MAILTRAP_ENDPOINT=send.api.mailtrap.io
 
 CLIENT_URL= http://localhost:5173
 ```
@@ -56,4 +62,16 @@ npm run build
 npm run start
 ```
 
-### I'll see you in the next one! 🚀
+## API Endpoints
+
+Here are some of the key API endpoints provided in this project:
+
+- `POST /api/auth/signup` - Register a new user
+- `POST /api/auth/login` - Login an existing user
+- `POST /api/auth/verify-email` - Verify user email address
+- `POST /api/auth/forgot-password` - Request a password reset
+- `POST /api/auth/reset-password/:token` - Update user password
+- `GET /api/auth/check-auth` - Check if user is authenticated
+- `POST /api/auth/logout` - Logout the user
+
+Happy coding! 🚀
